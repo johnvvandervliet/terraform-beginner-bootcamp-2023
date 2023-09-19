@@ -2,7 +2,8 @@
 
 # Terraform Beginner Bootcamp 2023
 
-## Semantic Versioning
+## Semantic Versioning :mage:
+
 This poject is going to use semantic Versioning for its tagging
 [semver.org](https://semver.org/)
 The general format **MAJOR.MINOR.PATCH**, eg. `1.0.1`
