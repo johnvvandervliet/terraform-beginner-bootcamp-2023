@@ -14,3 +14,5 @@ The general format **MAJOR.MINOR.PATCH**, eg. `1.0.1`
 - **PATCH** version when you make backward compatible bug fixes
 
 Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
+https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
+https://www.gitpod.io/docs/configure/workspaces/tasks
