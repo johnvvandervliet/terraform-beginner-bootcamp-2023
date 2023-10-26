@@ -112,4 +112,8 @@ This will run a plan and pass the changeset to be executed by terraform. Apply s
 
  `.terraform` directory contains cached providers and modules, shich workspace is currently active, and record the last know backend configuraion is case it meeds to migrate state on the next run.
 
- 
+ #### Terraform destroy
+
+ `terraform destroy` 
+ This will destroy resrouces.
+ You can also use the auto approve prompt flag to skip the appove prompt  `terraform destroy --auto-approve`
