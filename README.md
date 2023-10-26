@@ -55,3 +55,61 @@ aws sts get-caller-identity
 We'll need to generate the CLI Creds in order to connect
 
 
+# Terraform Basics
+
+### Terraform Registry
+
+Terraform sources their providers and modules from the Terraform restristy
+which is located at [registry.terraform.io](https://registry.terraform.io)
+
+- **providers** is an interface to APIs that will allow you to create resources in terraform
+- **Modules** are a way to refactor or make large amounts of code modular, portable, and shareable.
+
+[Random Terraform Provider](https://registry.terraform.io/providers/hashicorp/random)
+
+## Terrform Console
+
+We can see a list of all the Terraform commands by simply typing 'terraform'
+
+#### Terraform init
+
+at the start of a new terraform project we will run `terrafrom init` to download the binaries for the terraform providers that we'll use in this project.
+
+#### Terraform Plan
+
+`terraform plan`
+This will generate out a changeset, about the state of our infrastructure and waht will be chagned we can output this plan
+to be passed to an apply, but often you can ignore outputting
+
+#### Terraform Apply
+
+`terraform apply`
+
+This will run a plan and pass the changeset to be executed by terraform. Apply should promt us
+ you can supply the auto approve flag `terrafrom apply -auto-approve`
+
+ #### Terraform Lock Files
+
+ `.terraform.lock.hcl` contains the locked versioning for the providers or modules that 
+ should be used with this project.
+
+ The Terraform lock files should be committed to your version control system.
+
+
+
+ #### Terraform state files
+
+ `.terraform.tfstate` contain information about the current state of your infrastrucure
+
+ The file Should NOT be committed to version control as it contains sensistive data
+
+ If you lose this file, you lose knowing the state of your infrastructure 
+
+ `.terraform.tfstate.backup` is the previous state of your infrastucture 
+
+
+ #### Terraform Directory
+
+ `.terraform` directory contains cached providers and modules, shich workspace is currently active, and record the last know backend configuraion is case it meeds to migrate state on the next run.
+
+ 
