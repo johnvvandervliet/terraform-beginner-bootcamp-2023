@@ -117,3 +117,19 @@ This will run a plan and pass the changeset to be executed by terraform. Apply s
  `terraform destroy` 
  This will destroy resrouces.
  You can also use the auto approve prompt flag to skip the appove prompt  `terraform destroy --auto-approve`
+
+
+ #### Terraform issues with terraform cloud login and gitpod
+ when trying to use `terraform login` it will launch a wwiswig view to generate a token. this may make is hard to paste token so you may need
+ to create the file `/home/gitpod/.terraform.d/credentials.tfrc.json` and manually add your token in to that file
+If a browser does not open this automatically, open the following URL to proceed:
+    [Get the token manually](https://app.terraform.io/app/settings/tokens?source=terraform-login)
+
+ ```js
+ {
+  "credentials": {
+    "app.terraform.io": {
+      "token": "Your Token Here"
+    }
+  }
+}```
